@@ -1,7 +1,7 @@
 import css from './ContactList.module.css';
-import { selectVisibleContacts } from 'redux/selector';
+import { selectVisibleContacts } from 'redux/contacts/selector';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/contacts/operations';
 
 export const ContactList = () => {
   const contacts = useSelector(selectVisibleContacts);
