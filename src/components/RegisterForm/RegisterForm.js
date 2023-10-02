@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operation';
+import { Btn, Form, Input, Label, LogLink } from './RegisterForm.styled';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -18,10 +19,10 @@ export const RegisterForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
-      <label>
+    <Form onSubmit={handleSubmit} autoComplete="off">
+      <Label>
         Username
-        <input
+        <Input
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -29,28 +30,29 @@ export const RegisterForm = () => {
           placeholder="Enter name ..."
           required
         />
-      </label>
-      <label>
+      </Label>
+      <Label>
         Email
-        <input
+        <Input
           type="email"
           name="email"
           title="Email may contain letters, numbers, an apostrophe, and must be followed by '@' . For example: oleg@ukr.ua "
           placeholder="Enter email ..."
           required
         />
-      </label>
-      <label>
+      </Label>
+      <Label>
         Password
-        <input
+        <Input
           type="password"
           name="password"
           title="The password must contain at least 7 characters."
           placeholder="Enter password ..."
           required
         />
-      </label>
-      <button type="submit">Register</button>
-    </form>
+      </Label>
+      <Btn type="submit">Register</Btn>
+      <LogLink to="/login">Have acount? LogIn</LogLink>
+    </Form>
   );
 };

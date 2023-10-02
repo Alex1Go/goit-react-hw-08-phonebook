@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
+import { Text } from './Welcome.styled';
 
 export const Welcome = ({ title }) => {
-  return <h2>{title}</h2>;
+  return <Text>{title}</Text>;
 };
 
 Welcome.propTypes = {
