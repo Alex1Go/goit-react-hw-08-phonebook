@@ -1,14 +1,15 @@
 import { useDispatch } from 'react-redux';
-import { logIn } from 'redux/auth/operation';
+import { register } from 'redux/auth/operation';
 
-export const LoginForm = () => {
+export const RegisterForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
     dispatch(
-      logIn({
+      register({
+        name: form.elements.name.value,
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
@@ -18,6 +19,17 @@ export const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit} autoComplete="off">
+      <label>
+        Username
+        <input
+          type="text"
+          name="name"
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          placeholder="Enter name ..."
+          required
+        />
+      </label>
       <label>
         Email
         <input
@@ -38,7 +50,7 @@ export const LoginForm = () => {
           required
         />
       </label>
-      <button type="submit">Log In</button>
+      <button type="submit">Register</button>
     </form>
   );
 };
