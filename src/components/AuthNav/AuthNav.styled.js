@@ -8,16 +8,15 @@ export const Login = styled.ul`
 `;
 export const StyledLink = styled(NavLink)`
   display: block;
-  font-family: 'Poppins';
-  font-weight: 600;
-  font-size: 20px;
-  color: red;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 15px;
+  color: #524a4d;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover,
-  &:focus {
-    color: #000000;
-    background-color: rgba(250, 187, 24, 0.1);
+  &:hover {
+    color: #34c3da;
+    text-shadow: #5c6aeb 1px 0 1px;
   }
 `;

@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
 import { selectError, selectIsLoading } from 'redux/contacts/selector';
+import { Block } from './Contacts.styled';
 
 const Contacts = () => {
   const dispatch = useDispatch();
@@ -16,14 +17,14 @@ const Contacts = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
   return (
-    <div>
+    <Block>
       <Title title="Phonebook" />
       <ContactForm />
       <Title title="Contacts" />
       <Filter />
       {isLoading && !error && <b>Request in progress...</b>}
       <ContactList />
-    </div>
+    </Block>
   );
 };
 export default Contacts;

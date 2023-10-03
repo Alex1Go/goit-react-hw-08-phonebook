@@ -1,22 +1,24 @@
 .label {
     display: block;
     margin-top: 10px;
-    color: grey;
+    color: #524a4d;
     font-weight: 500;
     font-size: 18px;
 }
 
 .input {
     display: block;
-    margin-top: 10px;
-    padding: 5px;
+    margin-top: 6px;
+    padding: 15px 30px;
     width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
+    border-radius: 18px;
     cursor: pointer;
     font-size: 15px;
+    color: #524a4d;
+    background: #efefef;
 }
 
-.input:focus {
-    outline-color: grey;
+.input:hover {
+    border: 1px solid grey;
 }

@@ -11,60 +11,57 @@ export const Label = styled.label`
   flex-direction: column;
   gap: 8px;
   margin-top: 12px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
+  color: #524a4d;
 `;
 export const Input = styled.input`
   width: 250px;
-  padding: 22px 36px;
-
-  color: #000000;
+  padding: 20px 36px;
+  color: #524a4d;
   background: #efefef;
   border-radius: 18px;
-  border: 1px solid #efefef;
+  border: 1px solid rgba(33, 33, 33, 0.2);
 
   :placeholder {
     color: #757575;
   }
-
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover,
-  &:focus {
-    border: 1px solid #000000;
+  &:hover {
+    border: 1px solid grey;
   }
 `;
 
 export const Btn = styled.button`
+  font-family: 'Roboto';
   font-weight: 600;
   font-size: 18px;
-  margin-top: 25px;
+  margin-top: 15px;
   padding: 10px 20px;
-  background-color: grey;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+  background-color: #bcd1d1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(250, 187, 24, 0.1);
   border-radius: 14px;
-
+  color: #524a4d;
   cursor: pointer;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover,
-  &:focus {
-    color: red;
-    background-color: rgba(250, 187, 24, 0.1);
-    border: 1px solid #000000;
+  &:hover {
+    background-color: #95f0f0;
+    box-shadow: 0px 4px 8px rgba(123, 219, 219);
   }
 `;
 export const LogLink = styled(NavLink)`
+  font-weight: 600;
+  font-size: 14px;
   margin-top: 10px;
-  color: #8f8f8f;
+  color: #524a4d;
   cursor: pointer;
-  &:hover,
-  &:focus {
-    color: #fabb18;
+  &:hover {
+    color: #f57e07;
   }
 `;

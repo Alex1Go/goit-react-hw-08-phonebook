@@ -39,7 +39,7 @@ export const LoginForm = () => {
           required
         />
       </Label>
-      <Btn type="submit">Log In</Btn>
+      <Btn type="submit">LOG IN</Btn>
       <LogLink to="/register">Don`t have acount? Register</LogLink>
     </Form>
   );
